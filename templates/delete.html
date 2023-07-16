@@ -1,0 +1,17 @@
+{% extends 'basic.html' %}
+
+{% block title %}Delete To-do: {{ todo.sno }}{% endblock title %}
+
+{% block body %}
+    <div class="container my-3">
+        <h2>Delete To-do: {{ todo.sno }}</h2>
+        {% comment %} To-do delete confirmation {% endcomment %}
+        <div class="alert alert-danger">
+            <p class="mb-0">Confirm to-do deletion ? "{{ todo.sno }}"</p>
+        </div>
+        <h4 class="font-weight-bold text-danger">** This task cannot be undone!!!</h4>
+        <form action="" method="post">
+            <button type="submit" class="btn btn-sm btn-dark">Delete</button>
+        </form>
+    </div>
+{% endblock body %}
